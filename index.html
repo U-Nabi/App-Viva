@@ -1,337 +1,292 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2113.65">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'Helvetica Neue'; color: #1d1d1d; -webkit-text-stroke: #1d1d1d}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'Helvetica Neue'; color: #1d1d1d; -webkit-text-stroke: #1d1d1d; min-height: 15.0px}
-    span.s1 {font-kerning: none}
-    span.s2 {font: 13.0px 'Lucida Grande'; font-kerning: none}
-  </style>
-</head>
-<body>
-<p class="p1"><span class="s1">&lt;!DOCTYPE html&gt;</span></p>
-<p class="p1"><span class="s1">&lt;html lang="en"&gt;</span></p>
-<p class="p1"><span class="s1">&lt;head&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;title&gt;VivaFit Mobile&lt;/title&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;script src="https://cdn.jsdelivr.net/npm/chart.js"&gt;&lt;/script&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;style&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>:root {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>--deep-plum: #5E366E;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>--blush-rose: #F7C6C7;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>--gold: #FFD700;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>--ivory: #FAF9F6;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>--navy: #1B1B3A;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>* {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>box-sizing: border-box;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>-webkit-tap-highlight-color: transparent;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>body {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-family: 'Arial', sans-serif;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin: 0;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding: 0;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background: var(--ivory);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>color: var(--navy);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>touch-action: manipulation;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.app-container {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>max-width: 100%;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>min-height: 100vh;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding: 10px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.header {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background: var(--deep-plum);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>color: var(--ivory);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding: 15px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>text-align: center;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border-radius: 0 0 15px 15px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin-bottom: 10px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.nav-bar {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>position: fixed;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>bottom: 0;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>left: 0;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>right: 0;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background: var(--deep-plum);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding: 10px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>display: flex;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>justify-content: space-around;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>z-index: 100;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.nav-btn {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background: none;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border: none;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>color: var(--ivory);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>cursor: pointer;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding: 8px 12px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-size: 14px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.nav-btn.active {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background: var(--blush-rose);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>color: var(--navy);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border-radius: 20px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.section {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding: 10px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding-bottom: 70px; /* Space for nav bar */</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>display: none;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.section.active {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>display: block;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.input-group {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin: 15px 0;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>input, select {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>width: 100%;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding: 12px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin: 8px 0;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border: 2px solid var(--deep-plum);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border-radius: 8px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-size: 16px; /* Better for mobile */</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.workout-card {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background: white;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border: 2px solid var(--deep-plum);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border-radius: 10px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding: 15px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin: 15px 0;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>box-shadow: 0 2px 5px rgba(0,0,0,0.1);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.btn {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background: var(--gold);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>color: var(--navy);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding: 12px 20px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border: none;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border-radius: 25px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>cursor: pointer;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-weight: bold;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-size: 16px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>width: 100%;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin: 5px 0;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.btn:active {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>opacity: 0.8;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.progress-chart {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>width: 100%;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>height: 250px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin: 15px 0;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.qr-container {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>text-align: center;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin: 20px 0;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.qr-code {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>width: 200px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>height: 200px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>h2 {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>color: var(--deep-plum);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin-top: 10px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>/* Make text larger for mobile */</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>body {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-size: 16px;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/head&gt;</span></p>
-<p class="p1"><span class="s1">&lt;body&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="app-container"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;header class="header"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;h1&gt;VivaFit&lt;/h1&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;p&gt;Postpartum Recovery &amp; Fitness&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/header&gt;</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;nav class="nav-bar"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;button class="nav-btn active" onclick="showSection('profile')"&gt;Profile&lt;/button&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;button class="nav-btn" onclick="showSection('workouts')"&gt;Workouts&lt;/button&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;button class="nav-btn" onclick="showSection('nutrition')"&gt;Nutrition&lt;/button&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;button class="nav-btn" onclick="showSection('progress')"&gt;Progress&lt;/button&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/nav&gt;</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;!-- Profile Section --&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;section id="profile" class="section active"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;h2&gt;Your Profile&lt;/h2&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="input-group"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;input type="number" placeholder="Age" id="age"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;input type="number" placeholder="Height (cm)" id="height"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;input type="number" placeholder="Current Weight (kg)" id="currentWeight"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;input type="number" placeholder="Target Weight (kg)" id="targetWeight"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;select id="deliveryType"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;option value="normal"&gt;Normal Delivery&lt;/option&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;option value="cesarean"&gt;Cesarean&lt;/option&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/select&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;input type="number" placeholder="Weeks Postpartum" id="postpartumWeeks"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;button class="btn" onclick="saveProfile()"&gt;Save Profile&lt;/button&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;!-- Workouts Section --&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;section id="workouts" class="section"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;h2&gt;Today's Workout&lt;/h2&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="workout-card"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;h3&gt;Pelvic Floor Activation&lt;/h3&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;p&gt;&lt;strong&gt;Muscles:&lt;/strong&gt; Pelvic floor, Transverse Abdominis&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;p&gt;&lt;strong&gt;Why Now:&lt;/strong&gt; Essential for core stability after delivery&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;p&gt;&lt;strong&gt;Benefits:&lt;/strong&gt; Reduces incontinence risk&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;button class="btn" onclick="playVideo('pelvic')"&gt;</span><span class="s2">▶</span><span class="s1"> Start&lt;/button&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="workout-card"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;h3&gt;Abdominal Breathing&lt;/h3&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;p&gt;&lt;strong&gt;Muscles:&lt;/strong&gt; Diaphragm, Core&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;p&gt;&lt;strong&gt;Why Now:&lt;/strong&gt; Safe for all postpartum stages&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;p&gt;&lt;strong&gt;Benefits:&lt;/strong&gt; Helps reconnect with core muscles&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;button class="btn" onclick="playVideo('abs')"&gt;</span><span class="s2">▶</span><span class="s1"> Start&lt;/button&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;!-- Nutrition Section --&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;section id="nutrition" class="section"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;h2&gt;Daily Meal Log&lt;/h2&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="input-group"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;input type="text" placeholder="Food Item" id="foodItem"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;input type="number" placeholder="Calories" id="calories"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;button class="btn" onclick="logMeal()"&gt;Log Meal&lt;/button&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div id="calorieDisplay"&gt;Daily Calories: 0/1800&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;!-- Progress Section --&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;section id="progress" class="section"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;h2&gt;Your Progress&lt;/h2&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="progress-chart"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;canvas id="weightChart"&gt;&lt;/canvas&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;script&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// Navigation</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>function showSection(sectionId) {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>document.querySelectorAll('.section').forEach(section =&gt; {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>section.classList.remove('active');</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>});</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>document.getElementById(sectionId).classList.add('active');</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>document.querySelectorAll('.nav-btn').forEach(btn =&gt; {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>btn.classList.remove('active');</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>});</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>event.target.classList.add('active');</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// Profile Save</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>function saveProfile() {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>alert('Profile saved! Check dashboard for recommendations.');</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// Meal Logging</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>let totalCalories = 0;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>function logMeal() {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const calories = parseInt(document.getElementById('calories').value) || 0;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>totalCalories += calories;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>document.getElementById('calorieDisplay').innerHTML =<span class="Apple-converted-space"> </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>`Daily Calories: ${totalCalories}/1800`;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// Initialize Chart</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>window.onload = function() {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const ctx = document.getElementById('weightChart').getContext('2d');</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>new Chart(ctx, {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>type: 'line',</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>data: {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>labels: ['Week 1', 'Week 2', 'Week 3', 'Week 4'],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>datasets: [{</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>label: 'Weight (kg)',</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>data: [75, 73, 72, 71],</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>borderColor: '#F7C6C7',</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>tension: 0.4</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>}]</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>},</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>options: {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>responsive: true,</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>maintainAspectRatio: false</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>});</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p1"><span class="s1"><br>
-</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// QR Code functionality</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>function generateQRCode() {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>// In a real implementation, you would host this HTML file</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>// and generate a QR code pointing to the URL</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>alert("Scan the QR code below to access this app on your phone");</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// Video player (mock)</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>function playVideo(type) {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>alert(`Starting ${type} workout video...`);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>// In a real app, this would launch a video player</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</span></p>
-<p class="p2"><span class="s1"><span class="Apple-converted-space">    </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;!-- QR Code (replace with actual hosted URL) --&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="qr-container"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;img src="https://u-nabi.github.io/App-Viva/"<span class="Apple-converted-space"> </span></span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">             </span>alt="Scan to open app on phone" class="qr-code"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p&gt;Scan to open on your phone&lt;/p&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/body&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/html&gt;</span></p>
-</body>
-</html>
+{\rtf1\ansi\ansicpg1252\cocoartf2639
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 HelveticaNeue;}
+{\colortbl;\red255\green255\blue255;\red38\green38\blue38;}
+{\*\expandedcolortbl;;\cssrgb\c20000\c20000\c20000;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs26 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 <!DOCTYPE html>\
+<html lang="en">\
+<head>\
+    <meta charset="UTF-8">\
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">\
+    <title>VivaFit Mobile</title>\
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>\
+    <style>\
+        :root \{\
+            --deep-plum: #5E366E;\
+            --blush-rose: #F7C6C7;\
+            --gold: #FFD700;\
+            --ivory: #FAF9F6;\
+            --navy: #1B1B3A;\
+        \}\
+\
+        * \{\
+            box-sizing: border-box;\
+            -webkit-tap-highlight-color: transparent;\
+        \}\
+\
+        body \{\
+            font-family: 'Arial', sans-serif;\
+            margin: 0;\
+            padding: 0;\
+            background: var(--ivory);\
+            color: var(--navy);\
+            touch-action: manipulation;\
+        \}\
+\
+        .app-container \{\
+            max-width: 100%;\
+            min-height: 100vh;\
+            padding: 10px;\
+        \}\
+\
+        .header \{\
+            background: var(--deep-plum);\
+            color: var(--ivory);\
+            padding: 15px;\
+            text-align: center;\
+            border-radius: 0 0 15px 15px;\
+            margin-bottom: 10px;\
+        \}\
+\
+        .nav-bar \{\
+            position: fixed;\
+            bottom: 0;\
+            left: 0;\
+            right: 0;\
+            background: var(--deep-plum);\
+            padding: 10px;\
+            display: flex;\
+            justify-content: space-around;\
+            z-index: 100;\
+        \}\
+\
+        .nav-btn \{\
+            background: none;\
+            border: none;\
+            color: var(--ivory);\
+            cursor: pointer;\
+            padding: 8px 12px;\
+            font-size: 14px;\
+        \}\
+\
+        .nav-btn.active \{\
+            background: var(--blush-rose);\
+            color: var(--navy);\
+            border-radius: 20px;\
+        \}\
+\
+        .section \{\
+            padding: 10px;\
+            padding-bottom: 70px; /* Space for nav bar */\
+            display: none;\
+        \}\
+\
+        .section.active \{\
+            display: block;\
+        \}\
+\
+        .input-group \{\
+            margin: 15px 0;\
+        \}\
+\
+        input, select \{\
+            width: 100%;\
+            padding: 12px;\
+            margin: 8px 0;\
+            border: 2px solid var(--deep-plum);\
+            border-radius: 8px;\
+            font-size: 16px; /* Better for mobile */\
+        \}\
+\
+        .workout-card \{\
+            background: white;\
+            border: 2px solid var(--deep-plum);\
+            border-radius: 10px;\
+            padding: 15px;\
+            margin: 15px 0;\
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);\
+        \}\
+\
+        .btn \{\
+            background: var(--gold);\
+            color: var(--navy);\
+            padding: 12px 20px;\
+            border: none;\
+            border-radius: 25px;\
+            cursor: pointer;\
+            font-weight: bold;\
+            font-size: 16px;\
+            width: 100%;\
+            margin: 5px 0;\
+        \}\
+\
+        .btn:active \{\
+            opacity: 0.8;\
+        \}\
+\
+        .progress-chart \{\
+            width: 100%;\
+            height: 250px;\
+            margin: 15px 0;\
+        \}\
+\
+        .qr-container \{\
+            text-align: center;\
+            margin: 20px 0;\
+        \}\
+\
+        .qr-code \{\
+            width: 200px;\
+            height: 200px;\
+        \}\
+\
+        h2 \{\
+            color: var(--deep-plum);\
+            margin-top: 10px;\
+        \}\
+\
+        /* Make text larger for mobile */\
+        body \{\
+            font-size: 16px;\
+        \}\
+    </style>\
+</head>\
+<body>\
+    <div class="app-container">\
+        <header class="header">\
+            <h1>VivaFit</h1>\
+            <p>Postpartum Recovery & Fitness</p>\
+        </header>\
+\
+        <nav class="nav-bar">\
+            <button class="nav-btn active" onclick="showSection('profile')">Profile</button>\
+            <button class="nav-btn" onclick="showSection('workouts')">Workouts</button>\
+            <button class="nav-btn" onclick="showSection('nutrition')">Nutrition</button>\
+            <button class="nav-btn" onclick="showSection('progress')">Progress</button>\
+        </nav>\
+\
+        <!-- Profile Section -->\
+        <section id="profile" class="section active">\
+            <h2>Your Profile</h2>\
+            <div class="input-group">\
+                <input type="number" placeholder="Age" id="age">\
+                <input type="number" placeholder="Height (cm)" id="height">\
+                <input type="number" placeholder="Current Weight (kg)" id="currentWeight">\
+                <input type="number" placeholder="Target Weight (kg)" id="targetWeight">\
+                <select id="deliveryType">\
+                    <option value="normal">Normal Delivery</option>\
+                    <option value="cesarean">Cesarean</option>\
+                </select>\
+                <input type="number" placeholder="Weeks Postpartum" id="postpartumWeeks">\
+            </div>\
+            <button class="btn" onclick="saveProfile()">Save Profile</button>\
+        </section>\
+\
+        <!-- Workouts Section -->\
+        <section id="workouts" class="section">\
+            <h2>Today's Workout</h2>\
+            <div class="workout-card">\
+                <h3>Pelvic Floor Activation</h3>\
+                <p><strong>Muscles:</strong> Pelvic floor, Transverse Abdominis</p>\
+                <p><strong>Why Now:</strong> Essential for core stability after delivery</p>\
+                <p><strong>Benefits:</strong> Reduces incontinence risk</p>\
+                <button class="btn" onclick="playVideo('pelvic')">\uc0\u9654  Start</button>\
+            </div>\
+\
+            <div class="workout-card">\
+                <h3>Abdominal Breathing</h3>\
+                <p><strong>Muscles:</strong> Diaphragm, Core</p>\
+                <p><strong>Why Now:</strong> Safe for all postpartum stages</p>\
+                <p><strong>Benefits:</strong> Helps reconnect with core muscles</p>\
+                <button class="btn" onclick="playVideo('abs')">\uc0\u9654  Start</button>\
+            </div>\
+        </section>\
+\
+        <!-- Nutrition Section -->\
+        <section id="nutrition" class="section">\
+            <h2>Daily Meal Log</h2>\
+            <div class="input-group">\
+                <input type="text" placeholder="Food Item" id="foodItem">\
+                <input type="number" placeholder="Calories" id="calories">\
+                <button class="btn" onclick="logMeal()">Log Meal</button>\
+            </div>\
+            <div id="calorieDisplay">Daily Calories: 0/1800</div>\
+        </section>\
+\
+        <!-- Progress Section -->\
+        <section id="progress" class="section">\
+            <h2>Your Progress</h2>\
+            <div class="progress-chart">\
+                <canvas id="weightChart"></canvas>\
+            </div>\
+        </section>\
+    </div>\
+\
+    <script>\
+        // Navigation\
+        function showSection(sectionId) \{\
+            document.querySelectorAll('.section').forEach(section => \{\
+                section.classList.remove('active');\
+            \});\
+            document.getElementById(sectionId).classList.add('active');\
+            \
+            document.querySelectorAll('.nav-btn').forEach(btn => \{\
+                btn.classList.remove('active');\
+            \});\
+            event.target.classList.add('active');\
+        \}\
+\
+        // Profile Save\
+        function saveProfile() \{\
+            alert('Profile saved! Check dashboard for recommendations.');\
+        \}\
+\
+        // Meal Logging\
+        let totalCalories = 0;\
+        function logMeal() \{\
+            const calories = parseInt(document.getElementById('calories').value) || 0;\
+            totalCalories += calories;\
+            document.getElementById('calorieDisplay').innerHTML = \
+                `Daily Calories: $\{totalCalories\}/1800`;\
+        \}\
+\
+        // Initialize Chart\
+        window.onload = function() \{\
+            const ctx = document.getElementById('weightChart').getContext('2d');\
+            new Chart(ctx, \{\
+                type: 'line',\
+                data: \{\
+                    labels: ['Week 1', 'Week 2', 'Week 3', 'Week 4'],\
+                    datasets: [\{\
+                        label: 'Weight (kg)',\
+                        data: [75, 73, 72, 71],\
+                        borderColor: '#F7C6C7',\
+                        tension: 0.4\
+                    \}]\
+                \},\
+                options: \{\
+                    responsive: true,\
+                    maintainAspectRatio: false\
+                \}\
+            \});\
+        \}\
+\
+        // Video player (mock)\
+        function playVideo(type) \{\
+            alert(`Starting $\{type\} workout video...`);\
+            // In a real app, this would launch a video player\
+        \}\
+    </script>\
+\
+    <!-- QR Code (Replace with your actual GitHub Pages URL) -->\
+    <div class="qr-container">\
+        <img src="https://www.qrcode-monkey.com/?c=qr&s=10&d=https%3A%2F%2Fu-nabi.github.io%2FApp-Viva%2F" \
+             alt="Scan to open app on phone" class="qr-code">\
+        <p>Scan to open on your phone</p>\
+    </div>\
+</body>\
+</html>}
